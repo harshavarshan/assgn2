@@ -1,0 +1,27 @@
+<script>
+	 (function crossArraySum(a,b) 
+       {
+           let sums = [];
+           function sumAll() 
+           {
+               for (let i = 0, len = Math.max(a.length,b.length); i < len; i+=1) 
+               {
+                   if (!Number(a[i])) 
+                   {
+                       sums.push(Number(b[i]));
+                   }
+                   else if (!Number(b[i])) 
+                   {
+                       sums.push(Number(a[i]));
+                   }
+                   else 
+                   {
+                       sums.push(Number(a[i]) + Number(b[i]));
+                   }
+               }
+               
+           }
+           sumAll();
+           console.log(sums);
+       })([1,0,2,3,4], [3,5,6,7,8,13]);
+</script>

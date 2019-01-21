@@ -1,0 +1,14 @@
+<script>
+	function commonSub(strings) {
+    const min = Math.min(...strings.map(str => str.length));
+    let commonSub;
+    for (let i = 1; i <= min; i++) {
+        const [sub1, sub2] = strings.map(str => str.substring(0, i));
+        if (sub1 !== sub2) break;
+        commonSub = sub1;
+    }
+    return commonSub || null;
+}
+const strings = ['goo', 'google'];
+console.log(commonSub(strings));
+</script>

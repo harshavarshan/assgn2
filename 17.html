@@ -1,0 +1,7 @@
+<script>
+	const shuffleArr = arr => arr
+.map(a => [Math.random(), a])
+.sort((a, b) => a[0] - b[0])
+.map(a => a[1]);
+console.table(shuffleArr([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+</script>

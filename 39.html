@@ -1,0 +1,14 @@
+<script>
+	var array = [58, '', 'abcd', true, null, false, 0];
+
+function create(array){
+var container = [];
+array.forEach(function(i){
+if(i){
+container.push(i);
+}
+});
+console.log(container);
+}
+create(array);
+</script>

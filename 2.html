@@ -1,0 +1,11 @@
+<script>
+function first(arr, n){
+if(n == null) return arr[0];
+if(arr == null) return [];
+if(n < 0) return [];
+var res = arr.slice(0, n);
+return res;
+}
+console.log(first([7, 9, 0, -2]));
+
+</script>

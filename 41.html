@@ -1,0 +1,13 @@
+<script>
+	function rangeBetwee(a, b) {
+    const arr = [];
+    let max = Math.max(a, b);
+    let diff = Math.abs(a - b) + 1;
+    while (diff--) {
+        arr[diff] = max--;
+    }
+    return arr;
+}
+
+console.log(rangeBetwee(4, 7));
+</script>

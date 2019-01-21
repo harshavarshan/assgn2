@@ -1,0 +1,24 @@
+<script>
+	function strRange(start, end, gap) {
+    if (typeof start !== typeof end || gap === 0) {
+        return null;
+    } else if (typeof start === 'string' && typeof end === 'string') {
+        [start, end] = [start, end].map(el => el.charCodeAt());
+        var str = true;
+    }
+    const range = [];
+    let [lowest, highest] = [start, end];
+
+    if (start > end) {
+        gap = ~gap + 1;
+        [highest, lowest] = [start, end];
+    }
+    while (start >= lowest && start <= highest) {
+        range.push(start);
+        start += gap;
+    }
+    return typeof str !== 'undefined' ? String.fromCharCode(...range).split('') : range;
+}
+console.log(strRange(1, 10, 1)); 
+console.log(strRange("z", "k", 2));
+</script>

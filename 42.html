@@ -1,0 +1,25 @@
+<script>
+	function difference(a, b) {
+
+  // Sort integers correctly
+  function sortInts(x, y) {
+    return x - y;
+  }
+
+  // Flat n-deep arrays
+  function reduceRec(arr) {
+    return  arr.reduce((acc, val) => {
+      if(Array.isArray(val))
+        val = reduceRec(val);
+      return acc.concat(val);
+    }, []);
+  }
+
+  fa = reduceRec(a);
+  fb = reduceRec(b);
+  return Array.from(new Set(fa.concat(fb))).sort(sortInts);
+}
+
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+</script>

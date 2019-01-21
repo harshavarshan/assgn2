@@ -1,0 +1,24 @@
+<script>
+function swapCase(str) {
+    let modStr = '';
+    const ranges = ['a', 'z', 'A', 'Z'].map(el => el.charCodeAt(0));
+    const [a, z, A, Z] = ranges;
+    for (let letter of str) {
+        let c = letter.charCodeAt(0)
+        switch (true) {
+            case c >= a && c <= z:
+                modStr += String.fromCharCode(c - a + A);
+                break;
+            case c >= A && c <= Z:
+                modStr += String.fromCharCode(c - A + a);
+                break;
+            default:
+                modStr += letter;
+        }
+    }
+    return modStr;
+}
+const str = 'The Quick Brown Fox';
+console.log(swapCase(str));
+
+</script>

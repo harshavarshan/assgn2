@@ -1,0 +1,13 @@
+<script>
+	 function flatten(arr, shw, flnd = []) {
+  if (shw) return arr.reduce((a, b) => a.concat(b), []);
+  
+    arr.forEach(el => {
+        Array.isArray(el) ? flatten(el, shw, flnd) : flnd.push(el);
+    });
+    return flnd;
+}
+const arr = [1, [2], [3, [[4, [10, [12]]], 11]],[5,6]];
+console.log(flatten(arr)); /* [1, 2, 3, 4, 10, 12, 11, 5, 6] */
+console.log(flatten(arr, true));
+</script>

@@ -1,0 +1,12 @@
+<script>
+	function ex14(arr){
+for(var i = 0; i < arr.length; i++){
+if(arr[i] === arr[i+1])
+{
+arr.splice(arr[i+1], 1);
+}
+}
+return arr.join();
+}
+console.log(ex14(['a','a',1,1,2,2,3,3,4,4,5,5]));
+</script>

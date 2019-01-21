@@ -1,0 +1,11 @@
+<script>
+	 arr = [1,0,'a',-3,0,2,'b',-3, 3,-6,3,4,1,'a'];
+var sort = arr.sort();
+var res = [];
+for (var i = 0; i < sort.length; i++) {
+if(sort[i] === sort[i+1]){
+res.push(arr[i]);
+}
+}
+console.log(res.join());
+</script>

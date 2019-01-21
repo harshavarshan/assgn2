@@ -1,0 +1,13 @@
+<script>
+	function array_range(a,b) {
+var arr = [];
+if( a < 0 ) 
+b = a + b - 1;
+for(var i = a; i <= b ; i++) {
+arr.push(i);
+}
+return arr;
+}
+console.log(array_range(1, 4)); 
+console.log(array_range(-6, 4));
+</script>

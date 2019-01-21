@@ -1,0 +1,23 @@
+<script>
+const isSorted = arr => {
+    return arr.reduce((a, b) => (a <= b && a !== false) ? b : false);
+};
+
+function sort(arr) {
+    while (!isSorted(arr)) {
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                let temp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+const arr = [53, 29, 18, 56, 48, 25];
+const arr2 = [1, -2, 0, -3, 5, 6];
+console.log(sort(arr)); 
+console.log(sort(arr2));
+
+</script>

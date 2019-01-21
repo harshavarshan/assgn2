@@ -1,0 +1,13 @@
+<script>
+	function merge() {
+    const obj = {};
+    for (let i = 0; i < arguments.length; i++) {
+        let keys = arguments[i];
+        for (let j = 0; j < keys.length; j++) {
+            obj[keys[j]] = keys[j];
+        }
+    }
+    return Object.values(obj);
+}
+console.log(merge([1,2,3], [2,30,1]));
+</script>
